@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About AI Threat Hunter</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        document.querySelectorAll('a.nav-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+            if(link.getAttribute('href').startsWith('#')){
+                e.preventDefault();
+                document.querySelector(link.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+    </script>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <nav>
+        <span class="logo">AI Threat Hunter</span>
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link active">About</a>
+        <a href="results.html" class="nav-link">Batch Predictor</a>
+        <span class="contact">Contact</span>
+    </nav>
+    <main>
+        <div class="about-block animate-fadein">
+            <h1 class="gradient-text">About The Project</h1>
+            <div class="underline"></div>
+            <p>
+                The <span class="highlight">AI Threat Hunter</span> project uses advanced machine learning and real-world network data to automatically classify traffic and detect threats. 
+                <br>
+                <br>
+                <b>Features:</b>
+                <ul>
+                    <li>Live & Batch Prediction of network flows</li>
+                    <li>Performance Visualization & Reports</li>
+                    <li>Expert-validated modeling and automated pipeline</li>
+                    <li>Modern tech stack with Python, Flask, Scikit-learn</li>
+                </ul>
+            </p>
+            <p class="mission animate-pulse">Dedicated to safeguarding networks with AI-driven intelligence.</p>
+        </div>
+    </main>
+    <footer>
+        © 2025 AI Threat Hunter. All rights reserved.
+    </footer>
+    <script>
+    particlesJS("particles-js", {
+    particles: {
+        number: { value: 58, density: { enable: true, value_area: 900 } },
+        color: { value: "#23ffa9" },
+        shape: { type: "circle", stroke: { width: 0, color: "#fff" } },
+        opacity: { value: 0.21, random: true },
+        size: { value: 4, random: true },
+        line_linked: { enable: true, distance: 110, color: "#44e4eb", opacity: 0.2, width: 2 },
+        move: { enable: true, speed: 2.2, direction: "none", random: true, straight: false, out_mode: "out" }
+    },
+    interactivity: {
+        detect_on: "canvas",
+        events: { onhover: { enable: true, mode: "grab" }, onclick: { enable: true, mode: "push" }, resize: true },
+        modes: { grab: { distance: 150, line_linked: { opacity: 0.48 } }, push: { particles_nb: 4 } }
+    },
+    retina_detect: true
+    });
+    </script>
+    <script>
+            document.querySelectorAll('.button').forEach(btn => {
+            btn.addEventListener('mouseenter', () => {
+                btn.style.filter = 'drop-shadow(0 0 12px #44e4eb)';
+            });
+            btn.addEventListener('mouseleave', () => {
+                btn.style.filter = '';
+            });
+        });
+        </script>
+
+</body>
+</html>

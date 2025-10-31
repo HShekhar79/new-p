@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Batch Predictor - AI Threat Hunter</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        document.querySelectorAll('a.nav-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+            if(link.getAttribute('href').startsWith('#')){
+                e.preventDefault();
+                document.querySelector(link.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+    </script>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <nav>
+        <span class="logo">AI Threat Hunter</span>
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="results.html" class="nav-link active">Batch Predictor</a>
+        <span class="contact">Contact</span>
+    </nav>
+    <main>
+        <div class="predict-block animate-fadein">
+            <h1 class="gradient-text">Batch Predictor</h1>
+            <div class="underline"></div>
+            <form class="predict-form card animate-fadein-up" method="POST" enctype="multipart/form-data">
+                <label for="file">Upload CSV (network flows):</label>
+                <input type="file" id="file" name="file" accept=".csv">
+                <button class="button neon-glow" type="submit">Predict</button>
+            </form>
+            <div class="results-card">
+            <h2 class="results-title">Prediction Results</h2>
+            <table class="results-table">
+                <thead>
+                <tr>
+                    <th>Flow Duration</th>
+                    <th>Predicted Label</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1000</td>
+                    <td>BENIGN</td>
+                </tr>
+                <tr>
+                    <td>900</td>
+                    <td>BENIGN</td>
+                </tr>
+                </tbody>
+            </table>
+            </div>
+
+        </div>
+    </main>
+    <footer>
+        © 2025 AI Threat Hunter. All rights reserved.
+    </footer>
+    <script>
+    particlesJS("particles-js", {
+    particles: {
+        number: { value: 58, density: { enable: true, value_area: 900 } },
+        color: { value: "#23ffa9" },
+        shape: { type: "circle", stroke: { width: 0, color: "#fff" } },
+        opacity: { value: 0.21, random: true },
+        size: { value: 4, random: true },
+        line_linked: { enable: true, distance: 110, color: "#44e4eb", opacity: 0.2, width: 2 },
+        move: { enable: true, speed: 2.2, direction: "none", random: true, straight: false, out_mode: "out" }
+    },
+    interactivity: {
+        detect_on: "canvas",
+        events: { onhover: { enable: true, mode: "grab" }, onclick: { enable: true, mode: "push" }, resize: true },
+        modes: { grab: { distance: 150, line_linked: { opacity: 0.48 } }, push: { particles_nb: 4 } }
+    },
+    retina_detect: true
+    });
+    </script>
+    <script>
+        document.querySelectorAll('.button').forEach(btn => {
+        btn.addEventListener('mouseenter', () => {
+            btn.style.filter = 'drop-shadow(0 0 12px #44e4eb)';
+        });
+        btn.addEventListener('mouseleave', () => {
+            btn.style.filter = '';
+        });
+    });
+    </script>
+
+</body>
+</html>

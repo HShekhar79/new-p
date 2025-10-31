@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI Threat Hunter</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <nav>
+        <span class="logo">AI Threat Hunter</span>
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="results.html" class="nav-link">Batch Predictor</a>
+        <span class="contact">Contact</span>
+    </nav>
+    <main>
+        <div class="title-block animate-fadein">
+            <h1 class="gradient-text">AI Threat Hunter</h1>
+            <div class="underline"></div>
+            <p class="tagline animate-pulse">Intelligent Detection for Network Threats & Attacks</p>
+            <div class="ctas">
+                <a href="results.html" class="button neon-glow">Try Live Prediction</a>
+                <a href="about.html" class="button gradient">Learn More</a>
+            </div>
+        </div>
+        <!-- 2x2 rectangular feature grid -->
+        <section class="features-2x2">
+                    <div class="feature-card animate-fadein-up">
+            <div class="feature-icon">&#9888;</div>
+            <h2>Live Threat Detection</h2>
+            <p>Real-time analysis of network flows for instant alerts and threat classification.</p>
+        </div>
+        <div class="feature-card animate-fadein-up">
+            <div class="feature-icon">&#128187;</div>
+            <h2>Batch Prediction</h2>
+            <p>Upload CSVs for rapid, high-volume prediction and analytics.</p>
+        </div>
+        <div class="feature-card animate-fadein-up">
+            <div class="feature-icon">&#128202;</div>
+            <h2>Analytics & Reporting</h2>
+            <p>Get accuracy, trends, and detection reports with clear visualizations.</p>
+        </div>
+        <div class="feature-card animate-fadein-up">
+            <div class="feature-icon">&#128295;</div>
+            <h2>Expert Engineered</h2>
+            <p>Powered by Python, Flask, and Scikit-learn for robust, scalable use.</p>
+        </div>
+        </section>
+        <section class="tech-team-section animate-fadein-right">
+            <h2 class="tech-team-title">Our Technology Stack</h2>
+            <div class="tech-icons-grid">
+                <span class="tech-icon python">Python</span>
+                <span class="tech-icon flask">Flask</span>
+                <span class="tech-icon sklearn">Scikit-learn</span>
+                <span class="tech-icon pandas">Pandas</span>
+                <span class="tech-icon matplot">Matplotlib</span>
+                <span class="tech-icon seaborn">Seaborn</span>
+            </div>
+        </section>
+        <section class="mission-section animate-pulse">
+            <div class="mission-bar">
+                Dedicated to safeguarding networks with AI-driven intelligence, automation, and actionable insights.
+            </div>
+        </section>
+    </main>
+    <footer>
+        © 2025 AI Threat Hunter. All rights reserved.
+    </footer>
+    <script>
+    particlesJS("particles-js", {
+      particles: {
+        number: { value: 58, density: { enable: true, value_area: 900 } },
+        color: { value: "#23ffa9" },
+        shape: { type: "circle", stroke: { width: 0, color: "#fff" } },
+        opacity: { value: 0.21, random: true },
+        size: { value: 4, random: true },
+        line_linked: { enable: true, distance: 110, color: "#44e4eb", opacity: 0.2, width: 2 },
+        move: { enable: true, speed: 2.2, direction: "none", random: true, straight: false, out_mode: "out" }
+      },
+      interactivity: {
+        detect_on: "canvas",
+        events: { onhover: { enable: true, mode: "grab" }, onclick: { enable: true, mode: "push" }, resize: true },
+        modes: { grab: { distance: 150, line_linked: { opacity: 0.48 } }, push: { particles_nb: 4 } }
+      },
+      retina_detect: true
+    });
+    document.querySelectorAll('.button').forEach(btn => {
+        btn.addEventListener('mouseenter', () => {
+            btn.style.filter = 'drop-shadow(0 0 12px #44e4eb)';
+        });
+        btn.addEventListener('mouseleave', () => {
+            btn.style.filter = '';
+        });
+    });
+    </script>
+</body>
+</html>
